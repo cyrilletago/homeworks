@@ -295,3 +295,4 @@ def rhombus_area1(length_of_side, any_interior_angle) -> Number:
     13.6144564
     """
     return (sin(any_interior_angle))*length_of_side**2
+# some functions have less informative lengths because of the need for short lines
