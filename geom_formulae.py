@@ -29,7 +29,8 @@ def rectangle_area(length, width: Number) -> Number:
 
 def parallelogram_perimeter(first_side, second_side: Number) -> Number:
     """
-    calculate perimeter of a parallelogram from the length of the two non parallel sides
+    calculate perimeter of a parallelogram from the length of the
+    two non parallel sides
     :param first_side: one side
     :param second_side: the other side(non parallel to the first)
     :return:The perimeter(same unit as the length of the sides)
@@ -51,36 +52,37 @@ def parallelogram_area(base, height: Number) -> Number:
     return base*height
 
 
-def trapezium_perimeter(first_side, second_side, third_side, fourth_side: Number) -> Number:
+def trapezium_perimeter(side1, side2, side3, side4: Number) -> Number:
     """
 Calculate the perimeter of a trapezium when we have the four sides
-    :param first_side: the first side
-    :param second_side: the second side
-    :param third_side: the third side
-    :param fourth_side: the fourth side
+    :param side1: the first side
+    :param side2: the second side
+    :param side3: the third side
+    :param side4: the fourth side
     :return: the perimeter of the trapezium
     >>> trapezium_perimeter(2,4,5,3)
     14
     """
-    return first_side + second_side + third_side + fourth_side
+    return side1 + side2 + side3 + side4
 
 
-def trapezium_area(first_parallel_side, second_parallel_side, height: Number) -> Number:
+def trapezium_area(parallel_side1, parallel_side2, height: Number) -> Number:
     """
 Calculate the area of a trapezium when we have the length of the parallel sides
-    :param first_parallel_side: one of the parallel side
-    :param second_parallel_side: the other parallel side
+    :param parallel_side1: one of the parallel side
+    :param parallel_side2: the other parallel side
     :param height: the height of the trapezium
     :return: the area of the trapezium
     >>> trapezium_area(2,4,6)
     13
     """
-    return 0.5*(first_parallel_side + second_parallel_side)*height
+    return 0.5*(parallel_side1 + parallel_side2)*height
 
 
 def triangle_perimeter(first_side, second_side, third_side: Number) -> Number:
     """
-Calculate the perimeter of a triangle when we have the lengtH of the three sides
+Calculate the perimeter of a triangle when we have the length of the three
+     sides.
     :param first_side:first side
     :param second_side: second side
     :param third_side: third side
@@ -138,7 +140,8 @@ def cube_surface_area(length: Number) -> Number:
 
 def cube_volume(length: Number) -> Number:
     """
-    Calculates the volume of the cube, given the length of one side
+    Calculates the volume of the cube, given the length of
+    one side
     :param length: length on one side
     :return:the volume of the cube
     >>>cube_volume(6)
@@ -149,9 +152,11 @@ def cube_volume(length: Number) -> Number:
 
 def cone_surface_area(radius, side: Number) -> Number:
     """
-    Calculates the Surface area of a cone when given the radius and the length of the side
+    Calculates the Surface area of a cone when given the radius and
+    the length of the side
     :param radius: the radius
-    :param side: the side of the cone(the hypotenuse to the angle between tha radius and the height
+    :param side: the side of the cone(the hypotenuse to the angle
+    between tha radius and the height
     :return:the surface area of the cone
     >>>cone_surface_area(2,5)
     43.982297150257104
@@ -161,7 +166,8 @@ def cone_surface_area(radius, side: Number) -> Number:
 
 def cone_volume(radius, height: Number) -> Number:
     """
-    Calculates the volume of a cone when given the radius and the height
+    Calculates the volume of a cone when given the radius and the
+    height
     :param radius: The radius of the cone
     :param height: The height of the cone
     :return:the volume of the cone
@@ -173,7 +179,8 @@ def cone_volume(radius, height: Number) -> Number:
 
 def cylinder_surface_area(radius, height: Number) -> Number:
     """
-    Calculates the surface area of a cylinder when given the radius and the height
+    Calculates the surface area of a cylinder when given the radius
+    and the height
     :param radius: the radius of the cone
     :param height: the height of the cone
     :return:The surface area of the cone
@@ -197,7 +204,8 @@ def cylinder_volume(radius, height: Number) -> Number:
 
 def rectangular_solid_surface_area(length, width, height: Number) -> Number:
     """
-    Calculates the surface area of a rectangular solid when given the length, width and height
+    Calculates the surface area of a rectangular solid when given the length,
+    width and height
     :param length: length of rectangular solid
     :param width: width of rectangular solid
     :param height: height of rectangular solid
@@ -210,7 +218,8 @@ def rectangular_solid_surface_area(length, width, height: Number) -> Number:
 
 def rectangular_solid_volume(length, width, height: Number) -> Number:
     """
-    Calculates the volume of a rhombus when given the length, width and height
+    Calculates the volume of a rhombus when given the length, width and
+    height
     :param length: the length of the rectangular solid
     :param width: the width of the rectangular solid
     :param height:the height of the rectangular solid
@@ -223,8 +232,10 @@ def rectangular_solid_volume(length, width, height: Number) -> Number:
 
 def sphere_surface_area(value, choice='radius'):
     """
-    Calculates the surface area of a sphere from radius or diameter. The choice is either the 'radius'(default) or
-    'diameter' depending on the user. 'None' will be returned in case a value other than these two is
+    Calculates the surface area of a sphere from radius or diameter.
+    The choice is either the 'radius'(default) or
+    'diameter' depending on the user. 'None' will be returned in case
+    a value other than these two is
     entered as parameter.
     :param value: the value input by the user
     :param choice: the choice the user enters
@@ -261,25 +272,26 @@ def sphere_volume(value, choice='radius'):
     return (4.0/3.0)*pi*value**3
 
 
-def rhombus_area(length_of_one_diagonal, length_of_another_diagonal: Number) -> Number:
+def rhombus_area(length_diagonal1, length_diagonal2: Number) -> Number:
     """
     Calculates the area a rhombus when given the length of two distinct sides.
-    :param length_of_one_diagonal: length of one diagonal
-    :param length_of_another_diagonal: length of the other diagonal
+    :param length_diagonal1: length of one diagonal
+    :param length_diagonal2: length of the other diagonal
     :return:the area of the rhombus
     >>>rhombus_area(4,5)
     10.0
     """
-    return length_of_one_diagonal*length_of_another_diagonal/2.0
+    return length_diagonal1*length_diagonal2/2.0
 
 
-def rhombus_area1(length_of_any_side, any_interior_angle: Number) -> Number:
+def rhombus_area1(length_of_side, any_interior_angle) -> Number:
     """
-    computes the area of a rhombus when given the length of any side and any interior angle.
-    :param length_of_any_side: the length of any side of the rhombus
+    computes the area of a rhombus when given the length of any side
+    and any interior angle.
+    :param length_of_side: the length of any side of the rhombus
     :param any_interior_angle: any interior angle of the rhombus
     :return:the area of the rhombus
     >>>rhombus_area1(4,45)
     13.6144564
     """
-    return (sin(any_interior_angle))*length_of_any_side**2
+    return (sin(any_interior_angle))*length_of_side**2
