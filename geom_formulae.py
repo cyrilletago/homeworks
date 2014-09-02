@@ -31,9 +31,9 @@ def rectangle_area(length, width: Number) -> Number:
     calculate area of a rectangle from the length and the width
     :param length:the length
     :param width:the width
-    :return:The perimeter(same unit as the side length)
-    >>> rectangle_perimeter(2,4)
-    12
+    :return:The area(same unit as the side length)
+    >>> rectangle_area(2,4)
+    8
     """
     if dim_validate(length) and dim_validate(width):
         return length * width
