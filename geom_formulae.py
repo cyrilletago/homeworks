@@ -1,6 +1,7 @@
 __author__ = 'cryrille'
 from numbers import Number
 from math import *
+from dimension_validate import *
 
 
 def rectangle_perimeter(length, width: Number) -> Number:
@@ -12,7 +13,17 @@ def rectangle_perimeter(length, width: Number) -> Number:
     >>> rectangle_perimeter(2,4)
     12
     """
-    return 2*(length + width)
+    if dim_validate(length) and dim_validate(width):
+        return 2*(length + width)
+    elif dim_incomplete(length) | dim_incomplete(width):
+        raise AttributeError("OH!!! one of the arguments was forgotten, Check it!")
+    elif dim_type(length) | dim_type(width):
+        raise TypeError("This is not a number! Enter a Number")
+    elif dim_sign(length) | dim_type(width):
+        raise ValueError("Please enter positive numbers")
+    else:
+        raise ValueError("Not yet My level! I cant say what is wrong")
+print(rectangle_perimeter(-6, 7))
 
 
 def rectangle_area(length, width: Number) -> Number:
@@ -24,7 +35,16 @@ def rectangle_area(length, width: Number) -> Number:
     >>> rectangle_perimeter(2,4)
     12
     """
-    return length * width
+    if dim_validate(length) and dim_validate(width):
+        return length * width
+    elif dim_incomplete(length) | dim_incomplete(width):
+        raise AttributeError("OH!!! one of the arguments was forgotten, Check it!")
+    elif dim_type(length) | dim_type(width):
+        raise TypeError("This is not a number! Enter a Number")
+    elif dim_sign(length) | dim_type(width):
+        raise ValueError("Please enter positive numbers")
+    else:
+        raise ValueError("Not yet My level! I cant say what is wrong")
 
 
 def parallelogram_perimeter(first_side, second_side: Number) -> Number:
@@ -37,7 +57,17 @@ def parallelogram_perimeter(first_side, second_side: Number) -> Number:
     >>> parallelogram_perimeter(2,4)
     12
     """
-    return 2*(first_side + second_side)
+
+    if dim_validate(first_side) and dim_validate(second_side):
+        return 2*(first_side + second_side)
+    elif dim_incomplete(first_side) | dim_incomplete(second_side):
+        raise AttributeError("OH!!! one of the arguments was forgotten, Check it!")
+    elif dim_type(first_side) | dim_type(second_side):
+        raise TypeError("This is not a number! Enter a Number")
+    elif dim_sign(first_side) | dim_type(second_side):
+        raise ValueError("Please enter positive numbers")
+    else:
+        raise ValueError("Not yet My level! I cant say what is wrong")
 
 
 def parallelogram_area(base, height: Number) -> Number:
@@ -49,7 +79,16 @@ def parallelogram_area(base, height: Number) -> Number:
     >>> parallelogram_area(2,4)
     8
     """
-    return base*height
+    if dim_validate(base) and dim_validate(height):
+        return base*height
+    elif dim_incomplete(base) | dim_incomplete(height):
+        raise AttributeError("OH!!! one of the arguments was forgotten, Check it!")
+    elif dim_type(base) | dim_type(height):
+        raise TypeError("This is not a number! Enter a Number")
+    elif dim_sign(base) | dim_type(height):
+        raise ValueError("Please enter positive numbers")
+    else:
+        raise ValueError("Not yet My level! I cant say what is wrong")
 
 
 def trapezium_perimeter(side1, side2, side3, side4: Number) -> Number:
